@@ -50,7 +50,7 @@ public:
 	} MouseReportType;
 
 	typedef enum {
-		CurDefault, CurNone, CurUnderline, CurLowerThird, CurLowerHalf, CurTwoThirds, CurBlock,
+		CurDefault, CurNone, CurUnderline, CurLowerThird, CurLowerHalf, CurTwoThirds, CurBlock, CurBar,
 	} CursorType;
 
 	typedef enum {

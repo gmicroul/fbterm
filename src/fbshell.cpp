@@ -431,6 +431,19 @@ void FbShell::updateCursor()
 		}
 		break;
 
+	case CurBar:
+		if (mCursor.showed) {
+			bool dw = false;
+			drawChars(mCursor.attr, mCursor.x, mCursor.y, FW(1), 1, &mCursor.code, &dw);
+		} else {
+			screen->fillRect(FW(mCursor.x), FH(mCursor.y), 1, FH(1), mCursor.attr.fcolor);
+			if (mImProxy) {
+				Rectangle rect = { FW(mCursor.x), FH(mCursor.y), 1, FH(1) };
+				mImProxy->redrawImWin(rect);
+			}
+		}
+		break;
+
 	default: {
 		bool dw = (mCursor.attr.type != CharAttr::Single);
 
