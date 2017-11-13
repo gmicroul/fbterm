@@ -414,7 +414,6 @@ void FbShell::updateCursor()
 			Config::instance()->getOption("cursor-shape", default_shape);
 
 			if (!default_shape) default_shape = CurUnderline;
-			else default_shape = CurBlock;
 		}
 
 		shape = default_shape;
