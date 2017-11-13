@@ -554,6 +554,22 @@ void VTerm::set_cursor_type()
 	}
 }
 
+void VTerm::set_cursor_style()
+{
+	static const u16 lookup[] = {
+		/* 0 */ CurDefault,
+		/* 1 */ CurBlock,
+		/* 2 */ CurBlock,
+		/* 3 */ CurUnderline,
+		/* 4 */ CurUnderline,
+		/* 5 */ CurBar,
+		/* 6 */ CurBar,
+		/* 7 */ CurDefault,
+	};
+	mode_flags.cursor_shape = lookup[param[0] % 8];
+	modeChanged(CursorShape);
+}
+
 void VTerm::set_utf8()
 {
 	utf8 = true;

@@ -166,6 +166,7 @@ private:
 	void set_charset();
 	u32 translate_char(u32);
 	void set_cursor_type();
+	void set_cursor_style();
 	void linux_specific();
 	void begin_set_palette();
 	void set_palette();

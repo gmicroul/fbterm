@@ -70,6 +70,10 @@ const VTerm::Sequence VTerm::escape_sequences[] = {
 	// ESsquare
 	{ '[', 0,	ESfunckey },
 	{ '?', &VTerm::set_q_mode,	ESkeep },
+	// Probably shouldn't really be ESkeep, but it does the trick.
+	// The only thing this will break is other escape codes using space.
+	// Are there even any?
+	{ ' ', &VTerm::set_cursor_style, ESkeep },
 	{ '0' | ADDSAME(9), &VTerm::param_digit,	ESkeep },
 	{ ';', &VTerm::next_param,	ESkeep },
 	{ '@', &VTerm::insert_char,	ESnormal },
