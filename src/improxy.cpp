@@ -34,6 +34,7 @@
 #include "input.h"
 #include "fbterm.h"
 #include <time.h>
+#include <sys/select.h>
 
 #define NR_WIN_MSGS 512
 #define MSG_DRAWTEXT_MAX_LEN 10240

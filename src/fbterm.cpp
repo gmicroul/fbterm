@@ -38,8 +38,13 @@
 #include "mouse.h"
 
 #ifdef HAVE_SIGNALFD
-// <sys/signalfd.h> offered by some systems has bug with g++
-#include "signalfd.h"
+#include <sys/signalfd.h> //offered by some systems has bug with g++
+#include <sys/select.h>
+//#include "signalfd.h"
+
+#ifndef WAIT_ANY
+#define WAIT_ANY (-1)
+#endif
 
 static sigset_t oldSigmask;
 
