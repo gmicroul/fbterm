@@ -23,6 +23,7 @@ Instead of adding input method directly in FbTerm, a client-server based input m
 If you want to develope a new IM program for FbTerm, there is a IM example in im/ directory, which help you to understand IM architecture and provide some base sources to simplify the development.
 
 =======***********=======
+
 sudo apk add libgc++ make g++ linux-headers gpm-dev libvterm-dev fontconfig-dev
 ./configure
 make
