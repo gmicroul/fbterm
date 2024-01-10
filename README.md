@@ -25,9 +25,13 @@ If you want to develope a new IM program for FbTerm, there is a IM example in im
 =======***********=======
 
 sudo apk add libgc++ make g++ linux-headers gpm-dev libvterm-dev fontconfig-dev
+
 ./configure
+
 make
+
 vi src/mouse.cpp
+
 add "#include <cstring>" into mouse.cpp
 
 sudo make install
